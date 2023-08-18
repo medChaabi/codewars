@@ -8,15 +8,13 @@
 # This example will return the string Hello, John Smith! Welcome to Phoenix, Arizona!
 
 #Algorithm
-    # Method 1: 
-        # prob 1: make the full name , i make this by join to string at possition
-        # return the full sentence.
-    # Method 2: use join built in function
-        
+    
 #Method 1:
-# time complexity: O(1)
-def to_welcome(name,city,state):
-    name = name[0]+' '+name[1]
-    return f'Hello, {name}! welcome to {city}, {state}!'
+# time complexity: O(n)
+def say_hello(name,city,state):
+    # 1. join the (name) list by space
+    str_name = ' '.join(name) # O(n)
+    # 2. return the string
+    return f'Hello, {str_name}! Welcome to {city}, {state}!'
 
-print(to_welcome(['John', 'Smith'], 'Phoenix', 'Arizona'))
+print(say_hello(['John', 'Smith'], 'Phoenix', 'Arizona'))
